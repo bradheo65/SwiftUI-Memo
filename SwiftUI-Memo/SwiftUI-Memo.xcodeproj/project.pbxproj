@@ -17,6 +17,7 @@
 		A3EDCFD8290127CA00592369 /* MemoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDCFD7290127CA00592369 /* MemoStore.swift */; };
 		A3EDCFDB29012E0500592369 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDCFDA29012E0500592369 /* MemoCell.swift */; };
 		A3EDCFDD29012EFF00592369 /* ComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDCFDC29012EFF00592369 /* ComposeView.swift */; };
+		A3EDCFDF290131CA00592369 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDCFDE290131CA00592369 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		A3EDCFD7290127CA00592369 /* MemoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStore.swift; sourceTree = "<group>"; };
 		A3EDCFDA29012E0500592369 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		A3EDCFDC29012EFF00592369 /* ComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeView.swift; sourceTree = "<group>"; };
+		A3EDCFDE290131CA00592369 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				A3EDCFD12901259800592369 /* MainListView.swift */,
 				A3EDCFDA29012E0500592369 /* MemoCell.swift */,
 				A3EDCFDC29012EFF00592369 /* ComposeView.swift */,
+				A3EDCFDE290131CA00592369 /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3EDCFDB29012E0500592369 /* MemoCell.swift in Sources */,
+				A3EDCFDF290131CA00592369 /* DetailView.swift in Sources */,
 				A3EDCFC82901250F00592369 /* Persistence.swift in Sources */,
 				A3EDCFD8290127CA00592369 /* MemoStore.swift in Sources */,
 				A3EDCFD22901259800592369 /* MainListView.swift in Sources */,
