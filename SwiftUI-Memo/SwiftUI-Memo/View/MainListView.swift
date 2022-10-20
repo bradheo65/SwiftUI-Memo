@@ -14,12 +14,15 @@ struct MainListView: View {
     
     var body: some View {
         NavigationView {
-            List(store.list) { element in
-                NavigationLink {
-                    DetailView(memo: element)
-                } label: {
-                    MemoCell(memo: element)
+            List {
+                ForEach(store.list) { element in
+                    NavigationLink {
+                        DetailView(memo: element)
+                    } label: {
+                        MemoCell(memo: element)
+                    }
                 }
+                .onDelete(perform: store.delete)
             }
             .listStyle(.plain)
             .navigationTitle("내 메모")
