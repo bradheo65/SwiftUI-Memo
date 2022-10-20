@@ -16,6 +16,7 @@
 		A3EDCFD62901267300592369 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDCFD52901267300592369 /* Memo.swift */; };
 		A3EDCFD8290127CA00592369 /* MemoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDCFD7290127CA00592369 /* MemoStore.swift */; };
 		A3EDCFDB29012E0500592369 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDCFDA29012E0500592369 /* MemoCell.swift */; };
+		A3EDCFDD29012EFF00592369 /* ComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDCFDC29012EFF00592369 /* ComposeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		A3EDCFD52901267300592369 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		A3EDCFD7290127CA00592369 /* MemoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStore.swift; sourceTree = "<group>"; };
 		A3EDCFDA29012E0500592369 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
+		A3EDCFDC29012EFF00592369 /* ComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +67,6 @@
 				A3EDCFD4290125C800592369 /* Memory */,
 				A3EDCFD3290125BD00592369 /* CoreData */,
 				A3EDCFBE2901250E00592369 /* SwiftUI_MemoApp.swift */,
-				A3EDCFD12901259800592369 /* MainListView.swift */,
 				A3EDCFC22901250F00592369 /* Assets.xcassets */,
 				A3EDCFC42901250F00592369 /* Preview Content */,
 			);
@@ -101,7 +102,9 @@
 		A3EDCFD929012DED00592369 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A3EDCFD12901259800592369 /* MainListView.swift */,
 				A3EDCFDA29012E0500592369 /* MemoCell.swift */,
+				A3EDCFDC29012EFF00592369 /* ComposeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				A3EDCFD8290127CA00592369 /* MemoStore.swift in Sources */,
 				A3EDCFD22901259800592369 /* MainListView.swift in Sources */,
 				A3EDCFCB2901250F00592369 /* SwiftUI_Memo.xcdatamodeld in Sources */,
+				A3EDCFDD29012EFF00592369 /* ComposeView.swift in Sources */,
 				A3EDCFBF2901250E00592369 /* SwiftUI_MemoApp.swift in Sources */,
 				A3EDCFD62901267300592369 /* Memo.swift in Sources */,
 			);
