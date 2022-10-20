@@ -12,21 +12,12 @@ struct MainListView: View {
     
     var body: some View {
         NavigationView {
-            List(store.list) { memo in
-                VStack(alignment: .leading) {
-                    Text(memo.content)
-                        .font(.body)
-                        .lineLimit(1)
-                    
-                    Text(memo.insertData, style: .date)
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                }
+            List(store.list) { element in
+                MemoCell(memo: element)
             }
             .listStyle(.plain)
             .navigationTitle("내 메모")
         }
-        
     }
 }
 
