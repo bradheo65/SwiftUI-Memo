@@ -33,41 +33,40 @@ struct DetailView: View {
                         .foregroundColor(.secondary)
                 }
             }
-            .navigationTitle("메모 보기")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItemGroup(placement: .navigationBarTrailing) {
-                    Button {
-                        showComposer = true
-                    } label: {
-                        Image(systemName: "square.and.pencil")
-                    }
+        }
+        .navigationTitle("메모 보기")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItemGroup(placement: .bottomBar) {
+                Button {
+                    showDetailAlert = true
+                } label: {
+                    Image(systemName: "trash")
                 }
-                
-                ToolbarItemGroup(placement: .navigationBarLeading) {
-                    Button {
-                        showDetailAlert = true
+                .foregroundColor(.red)
+                .alert("삭제 확인",
+                       isPresented: $showDetailAlert) {
+                    Button(role: .destructive) {
+                        store.delete(memo: memo)
+                        dismiss()
                     } label: {
-                        Image(systemName: "trash")
+                        Text("삭제")
                     }
-                    .foregroundColor(.red)
-                    .alert("삭제 확인",
-                           isPresented: $showDetailAlert) {
-                        Button(role: .destructive) {
-                            store.delete(memo: memo)
-                            dismiss()
-                        } label: {
-                            Text("삭제")
-                        }
-                    } message: {
-                        Text("메모를 삭제할까요")
-                    }
-
+                } message: {
+                    Text("메모를 삭제할까요")
                 }
             }
-            .sheet(isPresented: $showComposer) {
-                ComposeView(memo: memo)
+            
+            ToolbarItemGroup(placement: .bottomBar) {
+                Button {
+                    showComposer = true
+                } label: {
+                    Image(systemName: "square.and.pencil")
+                }
             }
+        }
+        .sheet(isPresented: $showComposer) {
+            ComposeView(memo: memo)
         }
     }
 }

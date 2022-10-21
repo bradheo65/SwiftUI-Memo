@@ -37,6 +37,7 @@ struct MainListView: View {
                 ComposeView()
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
