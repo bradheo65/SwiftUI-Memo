@@ -48,9 +48,7 @@ class CoreDataManager: ObservableObject {
         
         saveContext()
     }
-    
-    @FetchRequest(sortDescriptors: [SortDescriptor(\MemoEntity.insertDate, order: .reverse)])
-    var memoList: FetchedResults<MemoEntity>
+
     
     func update(memo: MemoEntity?, content: String) {
         memo?.content = content

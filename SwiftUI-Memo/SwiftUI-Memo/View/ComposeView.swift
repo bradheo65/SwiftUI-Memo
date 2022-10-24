@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ComposeView: View {
-    @EnvironmentObject var store: MemoStore
+    @EnvironmentObject var manager: CoreDataManager
     
-    var memo: Memo? = nil
+    var memo: MemoEntity? = nil
     
     @Environment(\.dismiss) var dismiss
     
@@ -22,8 +22,8 @@ struct ComposeView: View {
                 TextEditor(text: $content)
                     .padding()
                     .onAppear {
-                        if let memo = memo {
-                            content = memo.content
+                        if let memo = memo?.content {
+                            content = memo
                         }
                     }
             }
@@ -41,9 +41,9 @@ struct ComposeView: View {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button {
                         if let memo = memo {
-                            store.update(memo: memo, content: content)
+                            manager.update(memo: memo, content: content)
                         } else {
-                            store.insert(memo: content)
+                            manager.addMemo(content: content)
                         }
                         dismiss()
                     } label: {
@@ -58,6 +58,6 @@ struct ComposeView: View {
 struct ComposeView_Previews: PreviewProvider {
     static var previews: some View {
         ComposeView()
-            .environmentObject(MemoStore())
+            .environmentObject(CoreDataManager.shared)
     }
 }
