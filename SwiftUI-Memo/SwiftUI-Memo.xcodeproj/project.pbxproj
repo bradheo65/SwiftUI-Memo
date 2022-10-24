@@ -10,7 +10,6 @@
 		A3EDCFBF2901250E00592369 /* SwiftUI_MemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDCFBE2901250E00592369 /* SwiftUI_MemoApp.swift */; };
 		A3EDCFC32901250F00592369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3EDCFC22901250F00592369 /* Assets.xcassets */; };
 		A3EDCFC62901250F00592369 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3EDCFC52901250F00592369 /* Preview Assets.xcassets */; };
-		A3EDCFC82901250F00592369 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDCFC72901250F00592369 /* Persistence.swift */; };
 		A3EDCFCB2901250F00592369 /* SwiftUI_Memo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3EDCFC92901250F00592369 /* SwiftUI_Memo.xcdatamodeld */; };
 		A3EDCFD22901259800592369 /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDCFD12901259800592369 /* MainListView.swift */; };
 		A3EDCFD62901267300592369 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDCFD52901267300592369 /* Memo.swift */; };
@@ -18,6 +17,7 @@
 		A3EDCFDB29012E0500592369 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDCFDA29012E0500592369 /* MemoCell.swift */; };
 		A3EDCFDD29012EFF00592369 /* ComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDCFDC29012EFF00592369 /* ComposeView.swift */; };
 		A3EDCFDF290131CA00592369 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDCFDE290131CA00592369 /* DetailView.swift */; };
+		A3F403A329065CAB00CB98D8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F403A229065CAB00CB98D8 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,6 @@
 		A3EDCFBE2901250E00592369 /* SwiftUI_MemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_MemoApp.swift; sourceTree = "<group>"; };
 		A3EDCFC22901250F00592369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3EDCFC52901250F00592369 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A3EDCFC72901250F00592369 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		A3EDCFCA2901250F00592369 /* SwiftUI_Memo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftUI_Memo.xcdatamodel; sourceTree = "<group>"; };
 		A3EDCFD12901259800592369 /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
 		A3EDCFD52901267300592369 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
@@ -33,6 +32,7 @@
 		A3EDCFDA29012E0500592369 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		A3EDCFDC29012EFF00592369 /* ComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeView.swift; sourceTree = "<group>"; };
 		A3EDCFDE290131CA00592369 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		A3F403A229065CAB00CB98D8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +86,8 @@
 		A3EDCFD3290125BD00592369 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				A3EDCFC72901250F00592369 /* Persistence.swift */,
 				A3EDCFC92901250F00592369 /* SwiftUI_Memo.xcdatamodeld */,
+				A3F403A229065CAB00CB98D8 /* CoreDataManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -184,12 +184,12 @@
 			files = (
 				A3EDCFDB29012E0500592369 /* MemoCell.swift in Sources */,
 				A3EDCFDF290131CA00592369 /* DetailView.swift in Sources */,
-				A3EDCFC82901250F00592369 /* Persistence.swift in Sources */,
 				A3EDCFD8290127CA00592369 /* MemoStore.swift in Sources */,
 				A3EDCFD22901259800592369 /* MainListView.swift in Sources */,
 				A3EDCFCB2901250F00592369 /* SwiftUI_Memo.xcdatamodeld in Sources */,
 				A3EDCFDD29012EFF00592369 /* ComposeView.swift in Sources */,
 				A3EDCFBF2901250E00592369 /* SwiftUI_MemoApp.swift in Sources */,
+				A3F403A329065CAB00CB98D8 /* CoreDataManager.swift in Sources */,
 				A3EDCFD62901267300592369 /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
