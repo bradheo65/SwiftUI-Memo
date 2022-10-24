@@ -15,6 +15,8 @@ struct MainListView: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\MemoEntity.insertDate, order: .reverse)])
     var memoList: FetchedResults<MemoEntity>
     
+    @State private var keyword = ""
+    
     var body: some View {
         NavigationView {
             List {
@@ -38,6 +40,14 @@ struct MainListView: View {
             }
             .sheet(isPresented: $showComposer) {
                 ComposeView()
+            }
+            .searchable(text: $keyword, prompt: "내용을 검색합니다.")
+            .onChange(of: keyword) { newValue in
+                if keyword.isEmpty {
+                    memoList.nsPredicate = nil
+                } else {
+                    memoList.nsPredicate = NSPredicate(format: "content CONTAINS[c] %@", newValue)
+                }
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
