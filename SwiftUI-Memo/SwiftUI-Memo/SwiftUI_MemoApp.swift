@@ -10,12 +10,12 @@ import SwiftUI
 @main
 struct SwiftUI_MemoApp: App {
     @StateObject var store = MemoStore()
-    let persistenceController = PersistenceController.shared
+    let manager = CoreDataManager.shared
 
     var body: some Scene {
         WindowGroup {
             MainListView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environment(\.managedObjectContext, manager.mainContext)
                 .environmentObject(store)
         }
     }
