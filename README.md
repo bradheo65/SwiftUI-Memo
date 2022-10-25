@@ -1,4 +1,4 @@
-# 메모장 
+# 메모 어플 프로젝트 
 
 ## 🙋🏻‍♂️ 프로젝트 소개
 Swift UI, Core Data를 활용한 메모 어플 프로젝트 입니다 
@@ -98,8 +98,8 @@ Swift UI, Core Data를 활용한 메모 어플 프로젝트 입니다
 
 #### T1. 앱 화면 하단에 Navigation ToolBarItem 안나오는 문제
 
-`ToolbarItemGroup(placement: .bottomBar)`로 하단에 Navigation ToolBarItem 배치하려고 했으나 아래 화면 처럼 ToolBarItem들이 안나오는 현상이 발생되어 NavigationView의 ViewStyle을 `StackNavigationViewStyle()`으로 설정해주어 해결했다. 발생된 원인으로는 아무래도 `item`이 2개이상이기에 위치에 자동적으로 잡아두지 못해 발생된 문제인 것 같다.
-`NavigationStack`으로 해결할 수 있지만 iOS16 버전 이상부터 사용할 수 있기 때문에 사용함에 있어 주의해야 할 것 같다.
+`ToolbarItemGroup(placement: .bottomBar)`로 하단에 Navigation ToolBarItem 배치하려고 했으나 아래 화면 처럼 ToolBarItem들이 안나오는 현상이 발생되어 NavigationView의 ViewStyle을 `StackNavigationViewStyle()`으로 설정해주어 해결했다. 발생된 원인에 대해 생각해보았을 때 `item`이 2개이상이기에 `item`의 위치 관련되어 발생된 문제인 것 같다.
+`NavigationStack`으로도 해결할 수 있지만, iOS16 버전 이상부터 사용할 수 있기 때문에 주의해야 할 것 같다.
 
 |적용 전|적용 후|
 |:---:|:---:|
